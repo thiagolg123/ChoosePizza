@@ -3,8 +3,6 @@ package br.com.thiago.tdd;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,7 +10,6 @@ import org.junit.Test;
 import br.com.thiago.enums.NomePizzas;
 import br.com.thiago.enums.NotaPizza;
 import br.com.thiago.model.Pessoa;
-import br.com.thiago.model.PessoaComparator;
 import br.com.thiago.model.Pizza;
 import br.com.thiago.service.BuildDadosPedido;
 
