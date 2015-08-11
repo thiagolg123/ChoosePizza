@@ -2,7 +2,10 @@ package br.com.thiago.enums;
 
 public enum NomePizzas {
 
-	PORTUGUESA("Portuguesa"), MARGUERITA("Marguerita");
+	PORTUGUESA("Portuguesa"), 
+	MARGUERITA("Marguerita"),
+	QUATRO_QUEIJOS("Quatro queijos"),
+	ESCAROLA("Escarola");
 
 	private final String text;
 
