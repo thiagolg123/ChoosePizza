@@ -40,6 +40,7 @@ public class BuildAnaliseDeDados {
 		return pizzaMaiorNota;
 	}
 
+	
 	public Analise buildAnalise() {
 		Analise analise = new Analise();
 		
