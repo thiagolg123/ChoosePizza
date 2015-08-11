@@ -9,7 +9,6 @@ import br.com.thiago.model.Pizza;
 
 public class BuildAnaliseDeDados {
 
-	//private static Analise analise;
 	private String nomePessoa;
 	private List<Map<String, List<Pizza>>> dadosParaAnalise;
 	
@@ -50,7 +49,6 @@ public class BuildAnaliseDeDados {
 		sb.append(" divide pizza de ");
 		sb.append(getPizzaMaiorNota().getNome());
 		sb.append(" com ");
-		
 		
 		analise.setTextAnalise(sb.toString());
 		return analise;
