@@ -53,7 +53,7 @@ public abstract class BuildAnalise {
 	}
 	
 	protected String getNomeComQuemDividir(Map<String, Pizza> nomesPizzasFavoritas){	
-		//TODO Falta ver com quem a pessoa passada vai dividir uma pizza, as pizzas favoritas ja;
+		//TODO Falta ver com quem a pessoa passada vai dividir uma pizza, as pizzas favoritas ja temos;
 		return "Renata";
 	}
 	
