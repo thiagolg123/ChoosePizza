@@ -15,6 +15,12 @@ import br.com.thiago.model.Pizza;
 import br.com.thiago.service.BuildAnaliseDeDados;
 import br.com.thiago.service.BuildDadosPedido;
 
+/**
+ * Acho que ficou meio feio, mas primeira versão :D
+ * 
+ * @author thiago.goncalves
+ *
+ */
 public class TddTests {
 	
 	@Test
@@ -84,7 +90,7 @@ public class TddTests {
 	
 	@Test
 	public void devePegarMaiorNotaComNomeDaPizzaConformeNomePassado(){
-		Pizza pizzaComMaiorNota = new BuildAnaliseDeDados("Renato", buildDados()).getPizzaMaiorNota();
+		Pizza pizzaComMaiorNota = new BuildAnaliseDeDados("Renato", buildDadosDoPedido()).getPizzaMaiorNota();
 				
 		Assert.assertEquals(NomePizzas.ESCAROLA, pizzaComMaiorNota.getNome());
 		Assert.assertEquals(NotaPizza.CINCO, pizzaComMaiorNota.getNota());
@@ -93,7 +99,9 @@ public class TddTests {
 	
 	@Test
 	public void deveAnalisarDadosConformeNomePassado(){
-		Analise analise = new BuildAnaliseDeDados("Renato", buildDados()).buildAnalise();
+		Analise analise  = 	new BuildAnaliseDeDados("Renato", buildDadosDoPedido())
+								.getAnaliseByName()
+								.buildAnalise();
 		
 		System.out.println(analise.toString());
 		Assert.assertEquals("Renato divide pizza de Escarola com Renata", analise.toString());
@@ -123,7 +131,7 @@ public class TddTests {
 	 * 
 	 * @return Retorna List da estrutura para analise
 	 */
-	private List<Map<String, List<Pizza>>> buildDados(){
+	private List<Map<String, List<Pizza>>> buildDadosDoPedido(){
 		List<Map<String, List<Pizza>>> dadosParaAnalise = new LinkedList<>();
 		List<List<Pizza>> listPizzas = new LinkedList<>();
 		
