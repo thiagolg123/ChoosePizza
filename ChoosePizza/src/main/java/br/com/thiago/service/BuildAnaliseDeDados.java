@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import br.com.thiago.exceptions.AnaliseException;
 import br.com.thiago.model.Analise;
 import br.com.thiago.model.Pizza;
 
@@ -29,6 +30,8 @@ public class BuildAnaliseDeDados extends BuildAnalise{
 		sb.append(getPizzaMaiorNotaUmaPessoa(nomePessoa, dadosParaAnalise).getNome());
 		sb.append(" com ");
 		sb.append(nomePessoaComQuemDividir);
+		
+		if(nomePessoaComQuemDividir == null) throw new AnaliseException();
 		
 		analise.setTextAnalise(sb.toString());
 		return analise;

@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import br.com.thiago.enums.NomePizzas;
 import br.com.thiago.enums.NotaPizza;
+import br.com.thiago.exceptions.AnaliseException;
 import br.com.thiago.model.Analise;
 import br.com.thiago.model.Pessoa;
 import br.com.thiago.model.Pizza;
@@ -105,6 +106,12 @@ public class TddTests {
 		
 		System.out.println(analise.toString());
 		Assert.assertEquals("Renato divide pizza de Escarola com Renata", analise.toString());
+	}
+	
+	
+	@Test(expected = AnaliseException.class)
+	public void deveLancarAnaliseException(){
+		new BuildAnaliseDeDados("Renato", buildDadosDoPedido()).buildAnalise();
 	}
 	
 	
